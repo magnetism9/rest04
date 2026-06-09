@@ -35,9 +35,9 @@
 }
 
 .feature-icon {
-  font-size: 2rem;
-  margin-bottom: 16px;
-  line-height: 1;
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48 !important;
+  margin-bottom: 18px;
+  display: block;
 }
 
 .feature-title {
@@ -85,9 +85,8 @@
 }
 
 .home-cta-icon {
-  font-size: 2.2rem;
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 48 !important;
   flex-shrink: 0;
-  line-height: 1;
 }
 
 .home-cta-info {

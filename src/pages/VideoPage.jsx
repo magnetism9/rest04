@@ -1,4 +1,5 @@
 import VideoGrid from '../components/VideoGrid'
+import MatIcon from '../components/MatIcon'
 import { categories, getVideosByCategory } from '../data/videos'
 import './VideoPage.css'
 
@@ -15,7 +16,7 @@ export default function VideoPage({ category, openModal }) {
       <div className="video-page-header">
         <div className="container">
           <div className="vp-header-content animate-fadeInUp">
-            <span className="label">{cat.icon} 카테고리</span>
+            <span className="label"><MatIcon name={cat.icon} size={13} /> 카테고리</span>
             <h1 className="section-title">{cat.label}</h1>
             <p className="section-subtitle">{cat.desc}</p>
           </div>

@@ -1,5 +1,6 @@
 import Hero from '../components/Hero'
 import VideoGrid from '../components/VideoGrid'
+import MatIcon from '../components/MatIcon'
 import { getFeaturedVideos, categories } from '../data/videos'
 import './Home.css'
 
@@ -29,7 +30,8 @@ export default function Home({ navigate, openModal }) {
                 className="btn btn-secondary"
                 onClick={() => navigate(cat.id)}
               >
-                {cat.icon} {cat.label} 전체보기
+                <MatIcon name={cat.icon} size={16} />
+                {cat.label} 전체보기
               </button>
             ))}
           </div>
@@ -48,33 +50,17 @@ export default function Home({ navigate, openModal }) {
 
           <div className="features-grid">
             {[
-              {
-                icon: '🎯',
-                title: '맞춤형 커리큘럼',
-                desc: '입문부터 고급까지 수준별로 구성된 체계적인 학습 경로를 제공합니다.',
-              },
-              {
-                icon: '📱',
-                title: '언제 어디서나',
-                desc: '모바일과 PC 모두 최적화된 환경에서 편리하게 학습할 수 있습니다.',
-              },
-              {
-                icon: '🆓',
-                title: '무료 수강',
-                desc: '모든 콘텐츠를 무료로 제공합니다. 회원가입 없이 바로 시작하세요.',
-              },
-              {
-                icon: '🔄',
-                title: '지속적인 업데이트',
-                desc: '최신 AI 트렌드에 맞춰 새로운 콘텐츠가 지속적으로 추가됩니다.',
-              },
+              { icon: 'ads_click',   title: '맞춤형 커리큘럼', desc: '입문부터 고급까지 수준별로 구성된 체계적인 학습 경로를 제공합니다.' },
+              { icon: 'devices',     title: '언제 어디서나',   desc: '모바일과 PC 모두 최적화된 환경에서 편리하게 학습할 수 있습니다.' },
+              { icon: 'card_giftcard', title: '무료 수강',     desc: '모든 콘텐츠를 무료로 제공합니다. 회원가입 없이 바로 시작하세요.' },
+              { icon: 'autorenew',   title: '지속적인 업데이트', desc: '최신 AI 트렌드에 맞춰 새로운 콘텐츠가 지속적으로 추가됩니다.' },
             ].map((f, i) => (
               <div
                 key={i}
                 className="feature-card animate-fadeInUp"
                 style={{ animationDelay: `${i * 0.1}s` }}
               >
-                <div className="feature-icon">{f.icon}</div>
+                <MatIcon name={f.icon} size={36} className="feature-icon mat-icon-accent" />
                 <h3 className="feature-title">{f.title}</h3>
                 <p className="feature-desc">{f.desc}</p>
               </div>
@@ -89,7 +75,7 @@ export default function Home({ navigate, openModal }) {
           <div className="home-cta-cards">
             {categories.map(cat => (
               <div key={cat.id} className="home-cta-card" onClick={() => navigate(cat.id)}>
-                <div className="home-cta-icon">{cat.icon}</div>
+                <MatIcon name={cat.icon} size={36} className="home-cta-icon mat-icon-accent" />
                 <div className="home-cta-info">
                   <h3 className="home-cta-title">{cat.label}</h3>
                   <p className="home-cta-desc">{cat.desc}</p>

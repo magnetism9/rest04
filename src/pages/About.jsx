@@ -1,3 +1,4 @@
+import MatIcon from '../components/MatIcon'
 import './About.css'
 
 export default function About() {
@@ -8,7 +9,7 @@ export default function About() {
       <div className="about-header">
         <div className="container">
           <div className="about-header-content animate-fadeInUp">
-            <span className="label">🏫 우리 소개</span>
+            <span className="label"><MatIcon name="school" size={13} /> 우리 소개</span>
             <h1 className="section-title about-title">
               AI 교육의 새로운 기준을<br />
               <span className="about-title-accent">에듀AI가 만들어갑니다</span>
@@ -42,12 +43,12 @@ export default function About() {
 
             <div className="about-values animate-fadeInUp delay-2">
               {[
-                { icon: '🎓', title: '교육 접근성', desc: '언어 장벽 없이, 비용 걱정 없이 누구나 배울 수 있는 환경을 만듭니다.' },
-                { icon: '🔬', title: '콘텐츠 품질', desc: '정확하고 최신 정보를 바탕으로 검증된 커리큘럼을 제공합니다.' },
-                { icon: '🌱', title: '지속 성장', desc: '빠르게 변하는 AI 환경에 맞춰 콘텐츠를 지속적으로 업데이트합니다.' },
+                { icon: 'local_library', title: '교육 접근성', desc: '언어 장벽 없이, 비용 걱정 없이 누구나 배울 수 있는 환경을 만듭니다.' },
+                { icon: 'labs',          title: '콘텐츠 품질', desc: '정확하고 최신 정보를 바탕으로 검증된 커리큘럼을 제공합니다.' },
+                { icon: 'eco',           title: '지속 성장',   desc: '빠르게 변하는 AI 환경에 맞춰 콘텐츠를 지속적으로 업데이트합니다.' },
               ].map((v, i) => (
                 <div key={i} className="about-value-item">
-                  <span className="about-value-icon">{v.icon}</span>
+                  <MatIcon name={v.icon} size={26} className="about-value-icon mat-icon-accent" />
                   <div>
                     <h4 className="about-value-title">{v.title}</h4>
                     <p className="about-value-desc">{v.desc}</p>
@@ -91,20 +92,20 @@ export default function About() {
           <div className="about-cats">
             {[
               {
-                icon: '🤖',
+                icon: 'smart_toy',
                 title: 'AI 동영상',
                 desc: 'ChatGPT, Claude, Midjourney 등 실용적인 AI 도구 활용법부터 프롬프트 엔지니어링, 비즈니스 AI 전략까지 실전 중심으로 배웁니다.',
                 tags: ['ChatGPT', 'Midjourney', '프롬프트', '자동화', '비즈니스 AI'],
               },
               {
-                icon: '📚',
+                icon: 'auto_stories',
                 title: 'AI 리터러시',
                 desc: '머신러닝, 딥러닝의 원리부터 AI 윤리, 데이터 리터러시까지 AI를 제대로 이해하기 위한 기초 개념을 체계적으로 학습합니다.',
                 tags: ['머신러닝', '딥러닝', 'AI 윤리', '데이터', 'NLP'],
               },
             ].map((cat, i) => (
               <div key={i} className="about-cat-card animate-fadeInUp" style={{ animationDelay: `${i * 0.15}s` }}>
-                <div className="about-cat-icon">{cat.icon}</div>
+                <MatIcon name={cat.icon} size={40} className="about-cat-icon mat-icon-accent" />
                 <h3 className="about-cat-title">{cat.title}</h3>
                 <p className="about-cat-desc">{cat.desc}</p>
                 <div className="about-cat-tags">
@@ -122,7 +123,7 @@ export default function About() {
       <section className="section about-contact-section">
         <div className="container">
           <div className="about-contact animate-fadeInUp">
-            <div className="about-contact-icon">✉️</div>
+            <MatIcon name="mail" size={44} className="about-contact-icon mat-icon-accent" />
             <h3 className="about-contact-title">문의 및 제안</h3>
             <p className="about-contact-desc">
               콘텐츠 제안, 강의 요청, 기타 문의사항이 있으시면 언제든지 연락해 주세요.

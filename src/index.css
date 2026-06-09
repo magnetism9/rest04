@@ -137,6 +137,26 @@
   background: var(--gradient-hero) !important;
 }
 
+/* ── Material Symbols ── */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+  font-style: normal;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+.mat-icon-sm  { font-size: 18px !important; }
+.mat-icon-md  { font-size: 24px !important; }
+.mat-icon-lg  { font-size: 32px !important; }
+.mat-icon-xl  { font-size: 44px !important; }
+.mat-icon-accent { color: var(--accent); }
+.mat-icon-muted  { color: var(--text-3); }
+
 /* ── Base Styles ── */
 html {
   scroll-behavior: smooth;

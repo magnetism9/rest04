@@ -37,7 +37,7 @@ export default function Footer({ navigate }) {
       <div className="footer-bottom">
         <div className="container footer-bottom-inner">
           <p className="footer-copy">© 2024–2025 에듀AI. All rights reserved.</p>
-          <p className="footer-made">AI 교육으로 미래를 준비하세요 🚀</p>
+          <p className="footer-made">AI 교육으로 미래를 준비하세요</p>
         </div>
       </div>
     </footer>

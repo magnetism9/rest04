@@ -1,3 +1,4 @@
+import MatIcon from './MatIcon'
 import './Hero.css'
 
 export default function Hero({ navigate }) {
@@ -11,7 +12,10 @@ export default function Hero({ navigate }) {
 
       <div className="container hero-content">
         <div className="hero-badge animate-fadeInUp">
-          <span className="badge badge-accent">🚀 AI 교육 플랫폼</span>
+          <span className="badge badge-accent">
+            <MatIcon name="rocket_launch" size={13} />
+            AI 교육 플랫폼
+          </span>
         </div>
 
         <h1 className="hero-title animate-fadeInUp delay-1">

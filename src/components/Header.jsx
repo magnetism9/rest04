@@ -168,7 +168,10 @@ export default function Header({ currentPage, navigate, theme, toggleTheme, pale
             </nav>
             <div className="mobile-controls">
               <button className="mobile-theme-btn" onClick={() => { toggleTheme(); setMenuOpen(false) }}>
-                {theme === 'dark' ? '☀️ 라이트 모드' : '🌙 다크 모드'}
+                <span className="material-symbols-outlined mat-icon-sm" style={{ marginRight: 8 }}>
+                  {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+                </span>
+                {theme === 'dark' ? '라이트 모드' : '다크 모드'}
               </button>
             </div>
           </div>

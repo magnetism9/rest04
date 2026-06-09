@@ -29,8 +29,11 @@
 }
 
 .grid-empty-icon {
-  font-size: 3rem;
+  font-size: 48px !important;
+  font-variation-settings: 'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 48;
   margin-bottom: 16px;
+  color: var(--text-3);
+  display: block;
 }
 
 /* Pagination */

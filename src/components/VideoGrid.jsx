@@ -17,7 +17,7 @@ export default function VideoGrid({ videos, onPlay }) {
   if (videos.length === 0) {
     return (
       <div className="grid-empty">
-        <div className="grid-empty-icon">📭</div>
+        <span className="material-symbols-outlined grid-empty-icon">inbox</span>
         <p>등록된 강의가 없습니다.</p>
       </div>
     )

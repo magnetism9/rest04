@@ -9,8 +9,8 @@
    ====================================================== */
 
 export const categories = [
-  { id: 'ai',          label: 'AI 동영상',    icon: '🤖', desc: 'AI 기술 및 활용 관련 동영상' },
-  { id: 'ai-literacy', label: 'AI 리터러시',  icon: '📚', desc: 'AI 리터러시 및 기초 교육 동영상' },
+  { id: 'ai',          label: 'AI 동영상',    icon: 'smart_toy',    desc: 'AI 기술 및 활용 관련 동영상' },
+  { id: 'ai-literacy', label: 'AI 리터러시',  icon: 'auto_stories', desc: 'AI 리터러시 및 기초 교육 동영상' },
 ]
 
 export const videos = [

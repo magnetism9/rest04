@@ -56,8 +56,18 @@ export default function VideoModal({ video, onClose }) {
         <div className="modal-info">
           <p className="modal-desc">{video.description}</p>
           <div className="modal-meta">
-            {video.duration && <span>⏱ {video.duration}</span>}
-            {video.date && <span>📅 {video.date}</span>}
+            {video.duration && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                <span className="material-symbols-outlined mat-icon-sm">timer</span>
+                {video.duration}
+              </span>
+            )}
+            {video.date && (
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: 4 }}>
+                <span className="material-symbols-outlined mat-icon-sm">calendar_today</span>
+                {video.date}
+              </span>
+            )}
             {isReal && (
               <a
                 href={`https://www.youtube.com/watch?v=${video.youtubeId}`}
